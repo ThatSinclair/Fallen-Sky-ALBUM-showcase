@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fallen Sky – Original Soundtrack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Fixed Background -->
+<div class="background-layer"></div>
+
+<!-- Vertical Scroll Indicators -->
+<div class="scroll-indicators" id="scrollIndicators"></div>
+
+<!-- Navigation Bar (Sticky) -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">TTien63 Official</div>
+        <button class="sfx-toggle-btn" id="sfxToggle" title="Toggle Sound Effects"><span class="sfx-icon">✦</span><span class="sfx-label">SFX</span></button>
+    </div>
+</nav>
+
+<!-- =============================================
+     CONTENT WRAPPER — direct children are snap pages
+     ============================================= -->
+<div class="content-wrapper">
+
+    <!-- PAGE 1: Header -->
+    <section id="top" class="snap-page header-section">
+        <!-- Background video -->
+        <video class="header-video" id="headerVideo" autoplay muted loop playsinline>
+            <source src="resources/gameplay content/video/Gameplay1 HD.mp4" type="video/mp4">
+        </video>
+        <div class="card header-card">
+            <div class="header-content">
+                <img class="game-logo" src="resources/Icon/Game/Fallen Sky Logo TINT.png" alt="Fallen Sky Logo">
+                <div class="header-text">
+                    <h2 class="main-title">FALLEN SKY</h2>
+                    <div class="header-stars">✦✦✦✧✧</div>
+                    <p class="tagline">The seeks of tranquils serenity</p>
+                    <p class="artist-credit">✧ By TTien63 <span class="artist-line">───────────────</span></p>
+                    <div class="social-section">
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@TTien63" target="_blank" class="social-btn">YouTube</a>
+                            <a href="https://open.spotify.com/artist/5MUHqguoOAqZORZTjGEyO0" target="_blank" class="social-btn">Spotify</a>
+                            <a href="https://discord.gg/GepbmWF" target="_blank" class="social-btn">Discord</a>
+                            <a href="mailto:6320contact@gmail.com" class="social-btn">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 2: OST — left tracklist + right player, side by side -->
+    <section id="ost" class="snap-page ost-section">
+
+        <!-- Left Panel: Tracklist -->
+        <div class="ost-left" id="tracklist">
+            <div class="panel-inner">
+                <h2 class="section-title">Original Soundtrack</h2>
+                <p class="track-count">15 Tracks</p>
+                <div class="tracklist">
+                    <div class="track-item">
+                        <span class="track-number">01</span>
+                        <span class="track-title">Butterfly Spirit (2022)</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">02</span>
+                        <span class="track-title">Butterfly Spirit</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">03</span>
+                        <span class="track-title">Alone</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">04</span>
+                        <span class="track-title">Alone (ambient)</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">05</span>
+                        <span class="track-title">Canva</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">06</span>
+                        <span class="track-title">I See Myself at Otherside (FINAL)</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">07</span>
+                        <span class="track-title">Lingering Memories</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">08</span>
+                        <span class="track-title">Long Trip</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">09</span>
+                        <span class="track-title">Long Trip (ambient)</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">10</span>
+                        <span class="track-title">Memory Garden 1</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">11</span>
+                        <span class="track-title">Memory Garden 2</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">12</span>
+                        <span class="track-title">Tenebrous (orchestra)</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">13</span>
+                        <span class="track-title">The Silk Song</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">14</span>
+                        <span class="track-title">There is Darkness</span>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-number">15</span>
+                        <span class="track-title">Lunar Night</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Player -->
+        <div class="ost-right">
+            <div class="panel-inner player-panel">
+
+                <!-- Album Art -->
+                <div class="album-cover-container">
+                    <img class="album-cover" src="resources/Music/album cover/Fallen Sky Legacy 1 - The White Label.png" alt="Album Cover">
+                </div>
+
+                <!-- Now Playing label -->
+                <p class="now-playing-label">NOW PLAYING</p>
+
+                <!-- Player Box -->
+                <div class="custom-player">
+                    <audio id="audioPlayer">
+                        <source src="resources/Music/OST/Butterfly Spirit (2022)- Fallen Sky OST.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <!-- Track name + mini play button -->
+                    <div class="player-track-header">
+                        <button class="player-play-icon" id="playIconBtn">▶</button>
+                        <div class="player-track-info">
+                            <p class="player-track-name" id="trackName">Butterfly Spirit (2022)</p>
+                            <div class="player-artist-info">
+                                <span class="player-artist-name" id="artistName">TTien63</span>
+                                <div class="player-featured-info" id="featuredInfo" style="display:none;">
+                                    <span class="player-featured-label">feat.</span>
+                                    <span class="player-featured-name" id="featuredName"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Star progress indicator -->
+                    <div class="player-progress-indicator">
+                        <span id="progressIndicator">✦✧✧✧✧✧✧✧✧✧✧</span>
+                    </div>
+
+                    <!-- Progress bar -->
+                    <div class="player-progress-container">
+                        <div class="player-progress-bar">
+                            <div class="player-progress-fill" id="progressFill"></div>
+                            <input type="range" class="player-progress-slider" id="progressSlider" min="0" max="100" value="0">
+                        </div>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="player-time">
+                        <span class="player-current-time" id="currentTime">0:00</span>
+                        <span class="player-duration" id="duration">0:00</span>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="player-controls">
+                        <button class="player-btn player-prev" id="prevBtn" title="Previous"><span>⏮</span></button>
+                        <button class="player-btn player-play-pause" id="playPauseBtn" title="Play"><span id="playIcon">▶</span></button>
+                        <button class="player-btn player-next" id="nextBtn" title="Next"><span>⏭</span></button>
+                        <div class="player-volume-control">
+                            <button class="player-volume-btn" id="volumeBtn"><span id="volumeIcon">🔊</span></button>
+                            <input type="range" class="player-volume-slider" id="volumeSlider" min="0" max="100" value="70">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="player-info">Click a track or use the controls to play</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PAGE 3: Information -->
+    <section id="information" class="snap-page info-section">
+        <div class="card centered-card">
+            <h2 class="section-title">Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Album</span>
+                    <span class="info-value">Fallen Sky Legacy 1</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Artist</span>
+                    <span class="info-value">TTien63</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tracks</span>
+                    <span class="info-value">15</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Format</span>
+                    <span class="info-value">MP3 / OGG</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 4: Credits -->
+    <section id="credits" class="snap-page credits-section">
+        <div class="card centered-card">
+            <h2 class="section-title">Credits</h2>
+            <div class="credits-list">
+                <div class="credit-item">
+                    <span class="credit-role">Composers</span>
+                    <span class="credit-names">TTien63</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-role">Game Developer</span>
+                    <span class="credit-names">Starfall Workshop</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-role">Web Design</span>
+                    <span class="credit-names">TTien63</span>
+                </div>
+            </div>
+            <p class="copyright">© 2026 Fallen Sky. All Rights Reserved.</p>
+        </div>
+    </section>
+
+</div><!-- end .content-wrapper -->
+
+<script>
+    // ── Scroll Indicators ──────────────────────────────────────────
+    const sections = [
+        { id: 'top',         label: 'Home'    },
+        { id: 'ost',         label: 'OST'     },
+        { id: 'information', label: 'Info'    },
+        { id: 'credits',     label: 'Credits' }
+    ];
+
+    let lastScrollTime = Date.now();
+    let hideDotsTimeout = null;
+    let currentActiveSection = null;
+
+    function createScrollIndicators() {
+        const container = document.getElementById('scrollIndicators');
+        sections.forEach((sec, i) => {
+            const dot = document.createElement('div');
+            dot.className = 'indicator-dot';
+            dot.id = `indicator-${i}`;
+            // Use empty star ✧ for inactive, will be updated on scroll
+            dot.innerHTML = `<span class="indicator-star">✧</span><span class="indicator-label">${sec.label}</span>`;
+            dot.addEventListener('click', () => {
+                document.getElementById(sec.id)
+                    ?.scrollIntoView({ behavior: 'smooth' });
+            });
+            container.appendChild(dot);
+        });
+    }
+
+    function showIndicators() {
+        const container = document.getElementById('scrollIndicators');
+        if (container) {
+            container.classList.remove('hidden-indicators');
+        }
+    }
+
+    function scheduleHideIndicators() {
+        // Clear existing timeout
+        if (hideDotsTimeout) {
+            clearTimeout(hideDotsTimeout);
+        }
+        // Show indicators first
+        showIndicators();
+        // Schedule hide after 1 second of inactivity
+        hideDotsTimeout = setTimeout(() => {
+            const container = document.getElementById('scrollIndicators');
+            if (container) {
+                container.classList.add('hidden-indicators');
+            }
+        }, 1000);
+    }
+
+    function updateScrollIndicators() {
+        let activeSection = null;
+        
+        sections.forEach((sec, i) => {
+            const el  = document.getElementById(sec.id);
+            const dot = document.getElementById(`indicator-${i}`);
+            if (!el || !dot) return;
+            const rect = el.getBoundingClientRect();
+            const mid  = window.innerHeight / 2;
+            const star = dot.querySelector('.indicator-star');
+            
+            if (rect.top <= mid && rect.bottom >= mid) {
+                activeSection = sec.id;
+                // Active section
+                document.querySelectorAll('.indicator-dot').forEach(d => {
+                    d.classList.remove('active');
+                    d.classList.remove('show-label');
+                    d.querySelector('.indicator-star').textContent = '✧'; // Empty star for inactive
+                });
+                dot.classList.add('active');
+                dot.classList.add('show-label');
+                star.textContent = '✦'; // Filled star for active
+                // Hide label after 2 seconds
+                setTimeout(() => {
+                    dot.classList.remove('show-label');
+                }, 2000);
+            }
+        });
+
+        // Show indicators and schedule autohide
+        if (activeSection !== currentActiveSection || Date.now() - lastScrollTime < 100) {
+            // Section changed or just scrolled
+            scheduleHideIndicators();
+            currentActiveSection = activeSection;
+        }
+        lastScrollTime = Date.now();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        createScrollIndicators();
+        updateScrollIndicators();
+        updateHeaderVideoState();
+
+        // Setup SFX event listeners
+        const interactiveElements = document.querySelectorAll(
+            '.track-item, .player-btn, .player-play-pause, .nav-links a, .indicator-dot'
+        );
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', playHoverSound);
+            el.addEventListener('click', playClickSound);
+        });
+    });
+
+    // Listen on window for scroll events
+    window.addEventListener('scroll', updateScrollIndicators);
+
+    // ── Header Video Control ──────────────────────────────────────
+    const headerVideo = document.getElementById('headerVideo');
+    const topSection = document.getElementById('top');
+
+    function updateHeaderVideoState() {
+        if (!headerVideo || !topSection) return;
+        const rect = topSection.getBoundingClientRect();
+        const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+        if (isVisible) {
+            headerVideo.play().catch(() => {});
+        } else {
+            headerVideo.pause();
+        }
+    }
+
+    window.addEventListener('scroll', updateHeaderVideoState);
+
+    // ── Glitch Text ────────────────────────────────────────────────
+    function glitchText(element, finalText, duration = 400) {
+        const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/   ';
+        let display = finalText.split('').map(() => chars[Math.floor(Math.random() * chars.length)]);
+        element.textContent = display.join('');
+        const step = duration / finalText.length;
+        finalText.split('').forEach((ch, i) => {
+            setTimeout(() => { display[i] = ch; element.textContent = display.join(''); }, step * i);
+        });
+    }
+
+    // ── Sound Effects ──────────────────────────────────────────────
+    const hoverSFX = new Audio('resources/SFX/hover.mp3');
+    const clickSFX = new Audio('resources/SFX/click.mp3');
+    hoverSFX.volume = 0.3;
+    clickSFX.volume = 0.4;
+    let sfxMuted = false;
+
+    function playHoverSound() {
+        if (sfxMuted) return;
+        hoverSFX.currentTime = 0;
+        hoverSFX.playbackRate = 0.95 + Math.random() * 0.1; // 0.95 to 1.05
+        hoverSFX.play().catch(() => {});
+    }
+
+    function playClickSound() {
+        if (sfxMuted) return;
+        clickSFX.currentTime = 0;
+        clickSFX.playbackRate = 0.90 + Math.random() * 0.2; // 0.90 to 1.10
+        clickSFX.play().catch(() => {});
+    }
+
+    // SFX toggle button
+    const sfxToggleBtn = document.getElementById('sfxToggle');
+    if (sfxToggleBtn) {
+        sfxToggleBtn.addEventListener('click', () => {
+            playClickSound(); // Play the click sound to confirm toggle (before muting)
+            sfxMuted = !sfxMuted;
+            sfxToggleBtn.classList.toggle('muted');
+            const sfxIcon = sfxToggleBtn.querySelector('.sfx-icon');
+            if (sfxIcon) {
+                sfxIcon.textContent = sfxMuted ? '✧' : '✦';
+            }
+            sfxToggleBtn.title = sfxMuted ? 'Sound Effects Off' : 'Sound Effects On';
+        });
+    }
+
+    // ── Parallax ───────────────────────────────────────────────────
+    const bg = document.querySelector('.background-layer');
+    let ticking = false;
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const max = (bg.offsetHeight - window.innerHeight) * 0.5;
+                const y   = Math.min(window.scrollY * 0.15, max);
+                bg.style.transform = `scale(1.1) translateY(-${y}px)`;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // ── Audio Player ───────────────────────────────────────────────
+    const audioPlayer    = document.getElementById('audioPlayer');
+    const playPauseBtn   = document.getElementById('playPauseBtn');
+    const playIcon       = document.getElementById('playIcon');
+    const prevBtn        = document.getElementById('prevBtn');
+    const nextBtn        = document.getElementById('nextBtn');
+    const progressSlider = document.getElementById('progressSlider');
+    const progressFill   = document.getElementById('progressFill');
+    const volumeSlider   = document.getElementById('volumeSlider');
+    const volumeBtn      = document.getElementById('volumeBtn');
+    const currentTimeDisplay = document.getElementById('currentTime');
+    const durationDisplay    = document.getElementById('duration');
+    const trackItems     = document.querySelectorAll('.track-item');
+    const trackNameDisplay   = document.getElementById('trackName');
+    const playIconBtn    = document.getElementById('playIconBtn');
+
+    const trackFiles = [
+        'resources/Music/OST/Butterfly Spirit (2022)- Fallen Sky OST.mp3',
+        'resources/Music/OST/Butterfly Spirit - Fallen Sky OST.mp3',
+        'resources/Music/OST/Fallen Sky OST - Alone.ogg',
+        'resources/Music/OST/Fallen Sky OST - Alone (ambient no loop).ogg',
+        'resources/Music/OST/Fallen Sky OST - Canva.mp3',
+        'resources/Music/OST/Fallen Sky OST - I see myself at otherside (FINAL).ogg',
+        'resources/Music/OST/Fallen Sky OST - Lingering memories.ogg',
+        'resources/Music/OST/Fallen Sky OST - Long trip.mp3',
+        'resources/Music/OST/Fallen Sky OST - Long trip ALT.mp3',
+        'resources/Music/OST/Fallen Sky OST - Memory Field 1.mp3',
+        'resources/Music/OST/Fallen Sky OST - Memory Field 2.mp3',
+        'resources/Music/OST/Fallen Sky OST - Tenebros orchestra.mp3',
+        'resources/Music/OST/Fallen Sky OST - The Silk Song.mp3',
+        'resources/Music/OST/Fallen Sky OST - There is darkness.ogg',
+        'resources/Music/OST/Fallen Star OST - Lunar Night.mp3'
+    ];
+    const trackNames = [
+        'Butterfly Spirit (2022)', 'Butterfly Spirit', 'Alone', 'Alone (ambient)',
+        'Canva', 'I See Myself at Otherside (FINAL)', 'Lingering Memories', 'Long Trip',
+        'Long Trip (ambient)', 'Memory Garden 1', 'Memory Garden 2', 'Tenebrous (orchestra)',
+        'The Silk Song', 'There is Darkness', 'Lunar Night'
+    ];
+    const trackArtists  = Array(15).fill('TTien63');
+    const featuredArtists = Array(15).fill('');
+
+    let currentTrackIndex = 0;
+
+    function formatTime(s) {
+        if (isNaN(s)) return '0:00';
+        return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+    }
+
+    function updateProgressIndicator(idx) {
+        document.getElementById('progressIndicator').textContent =
+            trackFiles.map((_, i) => i === idx ? '✦' : '✧').join('');
+    }
+
+    function loadTrack(index) {
+        currentTrackIndex = index;
+        audioPlayer.src = trackFiles[index];
+        glitchText(trackNameDisplay, trackNames[index], 400);
+        document.getElementById('artistName').textContent = trackArtists[index];
+        const fi = document.getElementById('featuredInfo');
+        if (featuredArtists[index]) {
+            document.getElementById('featuredName').textContent = featuredArtists[index];
+            fi.style.display = 'flex';
+        } else {
+            fi.style.display = 'none';
+        }
+        updateProgressIndicator(index);
+        trackItems.forEach(t => t.classList.remove('active'));
+        trackItems[index]?.classList.add('active');
+        if (trackItems[index]) glitchText(trackItems[index].querySelector('.track-title'), trackNames[index], 400);
+    }
+
+    playPauseBtn.addEventListener('click', () => {
+        audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+    });
+    playIconBtn.addEventListener('click', () => {
+        audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause();
+    });
+    audioPlayer.addEventListener('play',  () => { playIcon.textContent = '⏸'; playIconBtn.textContent = '⏸'; });
+    audioPlayer.addEventListener('pause', () => { playIcon.textContent = '▶'; playIconBtn.textContent = '▶'; });
+
+    audioPlayer.addEventListener('timeupdate', () => {
+        const pct = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        progressFill.style.width = pct + '%';
+        progressSlider.value = pct;
+        currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+    });
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        durationDisplay.textContent = formatTime(audioPlayer.duration);
+    });
+    progressSlider.addEventListener('input', e => {
+        audioPlayer.currentTime = (e.target.value / 100) * audioPlayer.duration;
+    });
+
+    volumeSlider.addEventListener('input', e => {
+        audioPlayer.volume = e.target.value / 100;
+        updateVolumeIcon();
+    });
+    volumeBtn.addEventListener('click', () => {
+        audioPlayer.volume = audioPlayer.volume > 0 ? 0 : volumeSlider.value / 100;
+        updateVolumeIcon();
+    });
+    function updateVolumeIcon() {
+        const v = audioPlayer.volume;
+        volumeSlider.value = v * 100;
+        document.getElementById('volumeIcon').textContent = v === 0 ? '🔇' : v < 0.5 ? '🔉' : '🔊';
+    }
+
+    prevBtn.addEventListener('click', () => { loadTrack((currentTrackIndex - 1 + trackFiles.length) % trackFiles.length); audioPlayer.play(); });
+    nextBtn.addEventListener('click', () => { loadTrack((currentTrackIndex + 1) % trackFiles.length); audioPlayer.play(); });
+    
+    // Auto-advance to next track when song ends (no SFX)
+    audioPlayer.addEventListener('ended', () => {
+        loadTrack((currentTrackIndex + 1) % trackFiles.length);
+        audioPlayer.play();
+    });
+
+    trackItems.forEach((item, i) => {
+        item.addEventListener('click', () => { loadTrack(i); audioPlayer.play(); });
+    });
+
+    // Smooth scroll for nav links (works with snap container)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(a.getAttribute('href'))
+                ?.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // ── Left panel: intercept wheel to scroll the tracklist, not the page ──
+    const ostLeft = document.querySelector('.ost-left');
+    ostLeft?.addEventListener('wheel', e => {
+        const el = ostLeft;
+        const atTop    = el.scrollTop === 0 && e.deltaY < 0;
+        const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1 && e.deltaY > 0;
+        if (!atTop && !atBottom) {
+            e.stopPropagation(); // keep scroll inside the panel
+        }
+        // if at boundary, let the snap container handle it
+    }, { passive: true });
+
+    audioPlayer.volume = 0.7;
+    updateVolumeIcon();
+    updateProgressIndicator(0);
+    loadTrack(0);  // Initialize first track as active in tracklist
+</script>
+
+</body>
+</html>
